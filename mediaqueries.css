@@ -1,18 +1,28 @@
 @media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
   .card {
-    width: 90%;
-    max-width: 100%;
+    min-width: 90%;
     height: auto;
+    min-height: 130px;
   }
 
   .card-content {
     text-align: initial;
     justify-content: flex-start;
     gap: 1rem;
+    flex-wrap: wrap;
   }
 
   .text-content h2,
   .text-content p {
     text-align: start;
+  }
+  .extra-box {
+    min-width: 90%;
   }
 }
