@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <title>Askadigi</title>
+  </head>
+  <body id="top">
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="#" class="brand"> A S K A D I G I</a>
+        </div>
+      </div>
+    </header>
+    <section class="hero1">
+      <main></main>
+      <a href="#hero2" class="action_btn">
+        <i class="fa-regular fa-square-caret-down"></i>
+      </a>
+    </section>
+    <section class="hero2" id="hero2">
+      <main class="hero2-main">
+        <h1>Works</h1>
+        <div class="cards">
+          <div class="card" onclick="toggleBox(this)">
+            <i class="fa-brands fa-flutter"></i>
+            <h2>Flutter</h2>
+            <p>Build fast and responsive apps for web and mobile.</p>
+            <div class="extra-box">
+              <a href="https://github.com/Andhikagr" target="_blank">
+                Click here</a
+              >
+            </div>
+          </div>
+          <div class="card" onclick="toggleBox(this)">
+            <i class="fa-solid fa-file-excel"></i>
+            <h2>Excel Analytics</h2>
+            <p>Build smart data tools and dashboards using Excel.</p>
+            <div class="extra-box">
+              <a href="https://lynk.id/andhikagr/vgwnee2p5dgm" target="_blank">
+                Click here</a
+              >
+            </div>
+          </div>
+          <div class="card" onclick="toggleBox(this)">
+            <i class="fa-solid fa-sack-dollar"></i>
+            <h2>E-Book Author</h2>
+            <p>Published an e-book to share insights.</p>
+            <div class="extra-box">
+              <a href="https://lynk.id/andhikagr" target="_blank">Click here</a>
+            </div>
+          </div>
+        </div>
+        <div class="title_contact">Get in touch</div>
+        <div class="contact-cards">
+          <div class="contact-card">
+            <a
+              href="
+            https://mail.google.com/mail/?view=cm&fs=1&to=rahadian.kidz92@gmail.com"
+              target="_blank"
+            >
+              <i class="fa-solid fa-envelope"></i>
+              <span>My Email</span>
+            </a>
+          </div>
+          <div class="contact-card">
+            <a
+              href="https://www.linkedin.com/in/andhika-gilang-rahadian-5883951b8/"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+          <div class="contact-card">
+            <a href="https://www.instagram.com/andhikagilangr/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+        <footer class="footer">
+          <p>&copy; 2025 Andhika Gilang Rahadian. All rights reserved.</p>
+        </footer>
+      </main>
+    </section>
+    <a href="#top" class="up_btn">
+      <i class="fa-regular fa-square-caret-up"></i>
+    </a>
+    <script src="script.js"></script>
+  </body>
+</html>
