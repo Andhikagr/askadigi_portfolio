@@ -42,7 +42,7 @@ html {
 .hero1 {
   position: relative;
   overflow-x: hidden;
-  background-color: rgba(12, 10, 39, 0.88);
+  background-color: #0c0a27e0;
   background-image: url(assets/cover.jpg);
   background-size: cover;
   background-position: center;

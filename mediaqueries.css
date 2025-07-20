@@ -49,7 +49,7 @@
   .title_contact {
     text-align: start;
     align-self: flex-start;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
   }
   .contact-cards {
     flex-wrap: wrap;
@@ -57,5 +57,15 @@
     gap: 1rem;
     width: 90%;
     padding: 0 1rem;
+  }
+  .action_btn i,
+  .up_btn {
+    color: #f7a74545; /* warna oranye terang */
+  }
+
+  .action_btn:hover i,
+  .up_btn:hover {
+    color: #ffc107; /* warna kuning lebih terang saat hover */
+    text-shadow: 0 0 8px rgba(255, 193, 7, 0.7);
   }
 }
