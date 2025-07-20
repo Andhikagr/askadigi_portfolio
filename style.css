@@ -9,12 +9,12 @@ html {
 
 .navbar {
   position: absolute;
-  top: 0;
+  top: 70px;
   left: 0;
   right: 0;
   z-index: 10;
   display: flex;
-  height: 200px;
+  height: 80px;
   justify-content: center;
   align-items: center;
   background-color: transparent;
@@ -41,18 +41,18 @@ html {
 
 .hero1 {
   position: relative;
-  height: 100vh;
   overflow-x: hidden;
   background-color: rgba(12, 10, 39, 0.88);
   background-image: url(assets/cover.jpg);
   background-size: cover;
   background-position: center;
   font-family: "Roboto", sans-serif;
+  min-height: 100vh;
 }
 
 .action_btn {
-  position: absolute;
-  bottom: 40px;
+  position: fixed;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   background: none;
@@ -94,43 +94,38 @@ html {
 /* hero2 */
 .hero2 {
   position: relative;
-  height: 100vh;
-  overflow-x: hidden;
   background: linear-gradient(rgba(21, 21, 16, 1), rgba(21, 21, 16, 0.8)),
     url(assets/sky.jpg);
   background-size: cover;
   background-position: center;
   font-family: "Roboto", sans-serif;
-  padding: 0 4rem;
-  font-size: 3rem;
-  color: aliceblue;
+  min-height: 100vh;
+  padding: 4rem 0 1rem;
 }
 
 .hero2-main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  width: 100%;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  justify-content: space-around;
 }
 
-.hero2 h1 {
-  padding-left: 2rem;
-  font-size: 3rem;
+.title_hero2 {
+  font-size: 1.2rem;
   color: #c9beb3;
-  min-width: 200px;
-  text-align: left;
+  text-align: center;
   align-self: flex-start;
 }
 
 .cards {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5rem;
+  gap: 2.2rem;
+  align-items: center;
+  flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+  justify-content: flex-start;
 }
 
 .card {
@@ -138,14 +133,44 @@ html {
   background: #1e1e1e;
   border-radius: 1.5rem;
   padding: 1.5rem;
-  height: 240px;
-  width: 280px;
+  height: 150px;
+  width: 260px;
   color: #c9beb3;
   text-align: center;
   border: 1px solid #333;
   transition: all 0.3s ease;
-  cursor: pointer;
-  overflow: hidden;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: left;
+  cursor: default;
+}
+
+.card-content i {
+  font-size: 2rem;
+  color: #f7a745;
+  flex-shrink: 0;
+}
+
+.text-content h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  color: #c9beb3;
+  font-weight: 600;
+}
+
+.text-content p {
+  font-size: 0.9rem;
+  text-align: initial;
+  text-wrap: normal;
+  color: #c9beb3;
+  margin: 0.3rem 0 0;
+  line-height: 1.4;
 }
 
 .card:hover {
@@ -153,35 +178,19 @@ html {
   transform: translateY(-5px) scale(1.03);
 }
 
-.card i {
-  font-size: 2.5rem;
-  color: #f7a745;
-  margin-bottom: 1rem;
-}
-
-.card h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
-
-.card p {
-  font-size: 1rem;
-  color: #c9beb3;
-  line-height: 1.5;
-}
 .extra-box {
   position: absolute;
-  bottom: 0.5rem;
+  bottom: 0.2rem;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(51, 51, 51, 0.98);
-  padding: 0.4rem;
+  padding: 0.2rem;
   border-radius: 1rem;
   display: none;
   z-index: 10;
   animation: fadePopup 0.3s ease-out forwards;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  min-width: 200px;
+  min-width: 220px;
   text-align: center;
   opacity: 0;
 }
@@ -194,7 +203,7 @@ html {
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 @keyframes fadePopup {
   from {
@@ -206,28 +215,31 @@ html {
     transform: translateX(-50%) translateY(-50%) scale(1);
   }
 }
+.card.active .extra-box {
+  display: block;
+  opacity: 1;
+}
+
 /* contact */
 
 .title_contact {
   align-self: flex-start;
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 1.4rem;
   text-align: left;
-  margin-top: 2rem;
+  margin-top: 4rem;
   color: #c9beb3;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-left: 2rem;
+  font-weight: bold;
 }
 
 .contact-cards {
-  margin-top: 1.5rem;
-  padding-left: 2rem;
-  align-self: flex-start;
+  margin-top: 2rem;
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   flex-wrap: wrap;
+  align-self: flex-start;
   justify-content: flex-start;
 }
 
@@ -247,7 +259,9 @@ html {
   color: #c9beb3;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+
   gap: 1rem;
 }
 
@@ -267,8 +281,8 @@ html {
 }
 .up_btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 5px;
+  right: 10px;
   font-size: 1.8rem;
   padding: 10px 12px;
   z-index: 1000;
@@ -294,5 +308,5 @@ html {
   text-align: center;
   font-size: 0.9rem;
   color: #aaa;
-  margin-top: 2rem;
+  margin-top: 5rem;
 }

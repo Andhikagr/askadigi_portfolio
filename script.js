@@ -1,27 +1,24 @@
 function toggleBox(cardElement) {
-  const clickedBox = cardElement.querySelector(".extra-box");
-
-  // Tutup semua box kecuali yang diklik
-  document.querySelectorAll(".extra-box").forEach((box) => {
-    if (box !== clickedBox) {
-      box.style.display = "none";
-    }
+  // Tutup semua card dulu
+  document.querySelectorAll(".card").forEach((card) => {
+    card.classList.remove("active");
   });
 
-  // Toggle box yang diklik
-  clickedBox.style.display =
-    clickedBox.style.display === "block" ? "none" : "block";
+  // Toggle hanya untuk card yang diklik
+  if (!cardElement.classList.contains("active")) {
+    cardElement.classList.add("active");
+  }
 }
 
-// Deteksi klik di luar kartu
+// Klik di luar card: tutup semua extra-box
 document.addEventListener("click", function (e) {
-  // Cek apakah klik terjadi di dalam elemen .card
   if (!e.target.closest(".card")) {
-    document.querySelectorAll(".extra-box").forEach((box) => {
-      box.style.display = "none";
+    document.querySelectorAll(".card").forEach((card) => {
+      card.classList.remove("active");
     });
   }
 });
+
 // contact card
 document.querySelectorAll(".contact-card").forEach((card) => {
   card.addEventListener("click", function () {
