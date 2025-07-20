@@ -1,16 +1,13 @@
 function toggleBox(cardElement) {
-  // Tutup semua card dulu
   document.querySelectorAll(".card").forEach((card) => {
     card.classList.remove("active");
   });
 
-  // Toggle hanya untuk card yang diklik
   if (!cardElement.classList.contains("active")) {
     cardElement.classList.add("active");
   }
 }
 
-// Klik di luar card: tutup semua extra-box
 document.addEventListener("click", function (e) {
   if (!e.target.closest(".card")) {
     document.querySelectorAll(".card").forEach((card) => {
