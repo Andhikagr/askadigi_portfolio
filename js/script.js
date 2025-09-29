@@ -39,6 +39,14 @@ fetch("assets/umroh/images.json")
       img.src = `assets/umroh/${src}`;
       img.alt = "umroh";
       img.draggable = false;
+
+      addModalClick(img);
+
+      img.addEventListener("click", () => {
+        modalImg.src = img.src;
+        modal.classList.add("show");
+      });
+
       li.appendChild(img);
       caraousel.appendChild(li);
     });
@@ -51,6 +59,15 @@ function initCarousel() {
   let isDragging = false,
     startX,
     startScrollLeft;
+
+  const imgs = document.querySelectorAll(".project__card img");
+
+  imgs.forEach((img) => {
+    img.addEventListener("click", () => {
+      modalImg.src = img.src;
+      modal.classList.add("show");
+    });
+  });
 
   const getCardWidth = () => {
     const card = caraousel.querySelector(".project__card");
@@ -67,10 +84,14 @@ function initCarousel() {
     .slice(-cardPerView)
     .reverse()
     .forEach((card) => {
-      caraousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+      const clone = card.cloneNode(true);
+      addModalClick(clone.querySelector("img"));
+      caraousel.insertBefore(clone, caraousel.firstChild);
     });
   caraouselChildrens.slice(0, cardPerView).forEach((card) => {
-    caraousel.insertAdjacentHTML("beforeend", card.outerHTML);
+    const clone = card.cloneNode(true);
+    addModalClick(clone.querySelector("img"));
+    caraousel.appendChild(clone);
   });
 
   // Mulai drag
@@ -133,3 +154,23 @@ function initCarousel() {
   caraousel.addEventListener("mouseleave", dragStop); // agar stop saat mouse keluar
   caraousel.addEventListener("scroll", infiniteScroll);
 }
+
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const modalClose = document.getElementById("modal-close");
+
+function addModalClick(img) {
+  img.addEventListener("click", (e) => {
+    e.stopPropagation();
+    modalImg.src = img.src;
+    modal.classList.add("show");
+  });
+}
+
+// modal.addEventListener("click", () => {
+//   modal.classList.remove("show");
+// });
+
+modalClose.addEventListener("click", () => {
+  modal.classList.remove("show");
+});
