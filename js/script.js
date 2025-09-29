@@ -25,42 +25,49 @@ window.addEventListener("load", () => {
 });
 
 // caraousel
-const caraousel = document.querySelector(".project__image");
-const caraouselChildrens = [...caraousel.children];
+const caraousels = document.querySelectorAll(".project__image");
+// const caraouselChildrens = [...caraousel.children];
 
-fetch("assets/umroh/images.json")
-  .then((res) => res.json())
-  .then((images) => {
-    images.forEach((src) => {
-      const li = document.createElement("li");
-      li.classList.add("project__card");
+const folders = ["umroh", "kasir"];
 
-      const img = document.createElement("img");
-      img.src = `assets/umroh/${src}`;
-      img.alt = "umroh";
-      img.draggable = false;
+caraousels.forEach((caraousel, index) => {
+  const folder = folders[index];
+  fetch(`assets/${folder}/images.json`)
+    .then((res) => res.json())
+    .then((images) => {
+      images.forEach((src) => {
+        const li = document.createElement("li");
+        li.classList.add("project__card");
 
-      addModalClick(img);
+        const img = document.createElement("img");
+        img.src = `assets/${folder}/${src}`;
+        img.alt = "folder";
+        img.draggable = false;
 
-      img.addEventListener("click", () => {
-        modalImg.src = img.src;
-        modal.classList.add("show");
+        addModalClick(img);
+
+        img.addEventListener("click", () => {
+          modalImg.src = img.src;
+          modal.classList.add("show");
+        });
+
+        li.appendChild(img);
+        caraousel.appendChild(li);
       });
-
-      li.appendChild(img);
-      caraousel.appendChild(li);
+      //
+      initCarousel(caraousel);
     });
-    //
-    initCarousel();
-  });
+});
 
-function initCarousel() {
+function initCarousel(caraousel) {
   const caraouselChildrens = [...caraousel.children];
   let isDragging = false,
     startX,
     startScrollLeft;
 
-  const imgs = document.querySelectorAll(".project__card img");
+  // const imgs = document.querySelectorAll(".project__card img");
+  const imgs = caraousel.querySelectorAll("img");
+  imgs.forEach((img) => addModalClick(img));
 
   imgs.forEach((img) => {
     img.addEventListener("click", () => {
@@ -77,7 +84,7 @@ function initCarousel() {
   };
 
   // Hitung card per view untuk infinite scroll
-  let cardPerView = Math.round(caraousel.offsetWidth / getCardWidth());
+  const cardPerView = Math.round(caraousel.offsetWidth / getCardWidth());
 
   // Clone card untuk infinite scroll
   caraouselChildrens
