@@ -1,7 +1,7 @@
 :root {
   --bg-dark: rgb(35, 35, 35);
   --bg: #2a4759;
-  --bg-light: #f8f4de;
+  --bg-light: #faf8ee;
   --text-dark: #135499;
   --text-light: #dddddd;
   --text-soft: #ffe3bb;
@@ -198,6 +198,8 @@ a {
   justify-content: center;
   display: flex;
   flex-direction: column;
+  position: relative;
+  border: 2px solid var(--bg-light);
 }
 .project__box .project__title {
   margin: 1rem;
@@ -250,6 +252,22 @@ a {
 
 .project__image.no-transition {
   scroll-behavior: auto;
+}
+
+.project__note {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.project__note p {
+  background-color: var(--secondary-color);
+  color: var(--background);
+  padding: 0.2rem 1rem;
+  border-radius: 0 0 8px 8px;
 }
 
 /* mediaqueries */
