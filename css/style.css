@@ -121,6 +121,7 @@ a {
   display: flex;
   gap: 2rem;
   padding: 0 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav__link a {
@@ -146,6 +147,18 @@ a {
   display: none;
 }
 
+/* mediaqueries */
+
+@media (max-width: 992px) {
+  .nav__link {
+    display: none;
+  }
+  #menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
 /* hero container */
 .hero__container {
   background-color: var(--background);
@@ -165,7 +178,6 @@ a {
 }
 
 .about__container {
-  background-color: var(--background);
   display: flex;
   align-items: start;
   justify-content: flex-start;
@@ -173,6 +185,10 @@ a {
   flex-direction: column;
   background-color: var(--bg);
   color: var(--background);
+}
+
+.tagline__title {
+  letter-spacing: 0.1rem;
 }
 
 .about__container p {
@@ -184,13 +200,11 @@ a {
 }
 .project__container {
   padding: 6rem 7%;
-  background-color: var(--background);
   min-height: 100vh;
   display: flex;
   align-items: start;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 1rem;
 }
 
 .project__container .project__box {
@@ -202,6 +216,7 @@ a {
   flex-direction: column;
   position: relative;
   border: 2px solid var(--bg-light);
+  margin: 1rem 0;
 }
 .project__box .project__title {
   margin: 0.5rem;
@@ -272,13 +287,50 @@ a {
 }
 
 /* mediaqueries */
+@media (max-width: 1024px) {
+  .project__box .project__image {
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 80vh;
+    height: 80vh;
+    display: flex;
+  }
+
+  .project__image .project__card {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+/* produk container */
 
 .product__container {
-  background-color: var(--background);
+  padding: 6rem 7%;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.product__box {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+.product__card {
+  width: 300px;
+  height: auto;
+  display: flex;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+}
+.product__card img {
+  width: 100%;
+  height: 100%;
 }
 
 .contact__container {

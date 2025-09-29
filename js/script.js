@@ -27,7 +27,6 @@ window.addEventListener("load", () => {
 // caraousel
 const caraousels = document.querySelectorAll(".project__image");
 // const caraouselChildrens = [...caraousel.children];
-
 const folders = ["umroh", "kasir"];
 
 caraousels.forEach((caraousel, index) => {
@@ -55,7 +54,9 @@ caraousels.forEach((caraousel, index) => {
         caraousel.appendChild(li);
       });
       //
-      initCarousel(caraousel);
+      if (window.innerWidth > 1024) {
+        initCarousel(caraousel);
+      }
     });
 });
 
