@@ -53,7 +53,7 @@ if (navClose) {
 // caraousel
 const caraousels = document.querySelectorAll(".project__image");
 // const caraouselChildrens = [...caraousel.children];
-const folders = ["umroh", "kasir"];
+const folders = ["umroh", "kasir", "car-rentals"];
 
 caraousels.forEach((caraousel, index) => {
   const folder = folders[index];
