@@ -387,12 +387,35 @@ a {
   gap: 2rem;
 }
 
-.contact__container i {
+.contact__box i {
+  display: inline-block;
   font-size: 4rem;
   color: var(--text-dark);
   border-radius: 8px;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1.4rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.contact__box i:hover {
+  color: var(--secondary-color);
+  transform: scale(1.1);
+}
+
+hr {
+  border: none;
+  height: 0.05rem;
+  background-color: rgba(192, 193, 223, 0.4);
+}
+
+.footer__container {
+  padding: 1.4rem 7%;
+  background-color: transparent;
+  color: var(--text-dark);
+  cursor: default;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 /* modal overlay */
