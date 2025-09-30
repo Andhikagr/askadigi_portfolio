@@ -330,6 +330,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
+  gap: 1.4rem;
 }
 .product__card {
   width: 300px;
