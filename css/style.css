@@ -321,7 +321,7 @@ a {
     overflow-y: auto;
     overflow-x: hidden;
     max-height: 80vh;
-    height: 35vh;
+    height: auto;
     display: flex;
   }
 
@@ -335,8 +335,8 @@ a {
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
-    max-height: 80vh;
-    height: 20vh;
+    max-height: 60vh;
+    height: auto;
     display: flex;
   }
 
