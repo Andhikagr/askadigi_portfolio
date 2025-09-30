@@ -24,6 +24,32 @@ window.addEventListener("load", () => {
   document.querySelector('.nav__link a[href="#home"]').classList.add("active");
 });
 
+// menu mobile
+
+const navbarLink = document.querySelector(".navbar__drawer");
+const hamburgerMenu = document.querySelector("#menu");
+const overlay = document.querySelector("#overlay");
+const navClose = document.querySelector("#nav-close");
+
+hamburgerMenu.addEventListener("click", () => {
+  navbarLink.classList.toggle("active");
+  overlay.classList.toggle("active");
+  hamburgerMenu.classList.toggle("hidden");
+});
+overlay.addEventListener("click", () => {
+  navbarLink.classList.remove("active");
+  overlay.classList.remove("active");
+  hamburgerMenu.classList.remove("hidden");
+});
+
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navbarLink.classList.remove("active");
+    overlay.classList.remove("active");
+    hamburgerMenu.classList.remove("hidden");
+  });
+}
+
 // caraousel
 const caraousels = document.querySelectorAll(".project__image");
 // const caraouselChildrens = [...caraousel.children];
