@@ -418,6 +418,10 @@ hr {
   display: flex;
 }
 
+.footer__container p span {
+  color: var(--secondary-color);
+}
+
 /* modal overlay */
 .modal {
   position: fixed;
