@@ -321,7 +321,7 @@ a {
     overflow-y: auto;
     overflow-x: hidden;
     max-height: 80vh;
-    height: 30vh;
+    height: 20vh;
     display: flex;
   }
 
