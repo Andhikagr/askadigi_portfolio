@@ -379,6 +379,13 @@ a {
   text-align: justify;
 }
 
+/* mediaqueries */
+@media (max-width: 540px) {
+  .product__container {
+    padding: 1.4rem 7%;
+  }
+}
+
 /* contact container */
 .contact__container {
   padding: 6rem 7% 1.4rem;
