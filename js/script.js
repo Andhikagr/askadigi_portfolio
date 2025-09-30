@@ -182,3 +182,13 @@ function addModalClick(img) {
 modalClose.addEventListener("click", () => {
   modal.classList.remove("show");
 });
+
+//wa intergrated
+const noWa = "6281553023775";
+const text =
+  "Halo, saya ingin konsultasi mengenai pembuatan website/aplikasi mobile";
+const WaUrl = "https://wa.me/" + noWa + "?text=" + encodeURIComponent(text);
+
+document.querySelectorAll(".wa-link").forEach((link) => {
+  link.href = WaUrl;
+});

@@ -177,6 +177,8 @@ a {
   color: var(--secondary-color);
 }
 
+/* about container */
+
 .about__container {
   display: flex;
   align-items: start;
@@ -198,6 +200,15 @@ a {
   text-align: justify;
   max-width: 900px;
 }
+
+.about__container a {
+  font-family: "Outfit";
+  cursor: pointer;
+  display: flex;
+}
+
+/* project container */
+
 .project__container {
   padding: 6rem 7% 1.4rem;
   min-height: 100vh;
@@ -360,12 +371,28 @@ a {
   text-align: justify;
 }
 
+/* contact container */
 .contact__container {
-  background-color: var(--background);
-  min-height: 100vh;
+  padding: 6rem 7% 1.4rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.contact__box {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+
+.contact__container i {
+  font-size: 4rem;
+  color: var(--text-dark);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* modal overlay */
