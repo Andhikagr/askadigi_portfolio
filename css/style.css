@@ -418,7 +418,7 @@ a {
 .project__note p {
   background-color: var(--secondary-color);
   color: var(--background);
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 0 0 8px 8px;
 }
 
