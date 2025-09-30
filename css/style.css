@@ -149,7 +149,7 @@ a {
 
 /* mediaqueries */
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .nav__link {
     display: none;
   }
@@ -175,6 +175,14 @@ a {
 }
 .tagline__note:hover {
   color: var(--secondary-color);
+}
+
+/* mediaqueries */
+@media (max-width: 768px) {
+  .hero__container h1 {
+    max-width: 350px;
+    text-align: center;
+  }
 }
 
 /* about container */
@@ -382,19 +390,22 @@ a {
 
 .contact__box {
   display: flex;
-  flex-direction: row;
   padding: 1rem 0;
   gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .contact__box i {
-  display: inline-block;
-  font-size: 4rem;
+  display: flex;
+  font-size: clamp(3rem, 5vw, 4rem);
   color: var(--text-dark);
   border-radius: 8px;
   padding: 0.2rem 1.4rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease-in-out;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact__box i:hover {
@@ -420,6 +431,20 @@ hr {
 
 .footer__container p span {
   color: var(--secondary-color);
+}
+
+/* mediaqueries */
+@media (max-width: 768px) {
+  .contact__container {
+    align-items: center;
+    justify-content: center;
+  }
+  .contact__box {
+    padding: 1rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
 }
 
 /* modal overlay */
