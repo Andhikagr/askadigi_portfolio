@@ -218,3 +218,14 @@ const WaUrl = "https://wa.me/" + noWa + "?text=" + encodeURIComponent(text);
 document.querySelectorAll(".wa-link").forEach((link) => {
   link.href = WaUrl;
 });
+
+//navlink-mobile
+
+navLink.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      window.open(link.href, "_blank");
+    }
+  });
+});
