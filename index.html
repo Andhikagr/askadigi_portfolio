@@ -64,7 +64,7 @@
       </a>
     </main>
     <section class="about__container" id="about">
-      <h3 class="tagline__title">Tentang Kami.</h3>
+      <h2 class="tagline__title">Tentang Kami.</h2>
       <p>
         Berawal dari keinginan sederhana untuk bikin teknologi lebih mudah
         dijangkau semua orang, Askadigi hadir sebagai teman digitalmu. Kami
@@ -74,8 +74,8 @@
       <a class="wa-link tagline__note" target="_blank"> Klik aja </a>
     </section>
     <section class="project__container" id="project">
-      <h3 class="tagline__title">Lihat Proyek Kami</h3>
-      <div class="project__box">
+      <h2 class="tagline__title">Lihat Proyek Kami</h2>
+      <article class="project__box">
         <div class="project__title">
           <p>Umroh Website</p>
         </div>
@@ -85,8 +85,8 @@
           <p>CSS</p>
           <p>Javascript</p>
         </div>
-      </div>
-      <div class="project__box">
+      </article>
+      <article class="project__box">
         <div class="project__title">
           <p>Aplikasi Mobile Kasirnyong</p>
         </div>
@@ -97,8 +97,8 @@
           <p>SQLite</p>
           <p>G-Drive</p>
         </div>
-      </div>
-      <div class="project__box">
+      </article>
+      <article class="project__box">
         <div class="project__title">
           <p>Aplikasi Mobile Askadigi Rental Cars</p>
         </div>
@@ -109,14 +109,14 @@
           <p>MySQL</p>
           <p>Midtrans</p>
         </div>
-      </div>
+      </article>
     </section>
     <section class="product__container" id="product">
-      <h3 class="tagline__title">Produk Digital</h3>
+      <h2 class="tagline__title">Produk Digital</h2>
       <div class="product__box">
-        <div class="product__card">
+        <article class="product__card">
           <a href="https://lynk.id/andhikagr/1k1wzn4vww6d">
-            <img src="assets/excel-book.png" alt="" />
+            <img src="assets/excel-book.png" alt="Cover Buku Excel Hackbook"" />
           </a>
           <p>Buku Excel Hackbook</p>
           <p class="tagline__des">
@@ -124,20 +124,23 @@
             menguasai Excel dari A sampai Z secara praktis, padat, dan langsung
             bisa dipakai!
           </p>
-        </div>
-        <div class="product__card">
+        </article>
+        <article class="product__card">
           <a href="https://lynk.id/andhikagr/l3gvy3z1gxj3">
-            <img src="assets/dart-book.png" alt="" />
+            <img src="assets/dart-book.png" alt="Cover Buku Dart" />
           </a>
           <p>Buku Dart</p>
           <p class="tagline__des">
             E-Book Pemrograman Dart: Dari Nol Hingga Mahir ini berisi 11 bagian
             terstruktur yang membahas dasar hingga fitur modern Dart.
           </p>
-        </div>
-        <div class="product__card">
+        </article>
+        <article class="product__card">
           <a href="https://lynk.id/andhikagr/vgwnee2p5dgm">
-            <img src="assets/excel-app.png" alt="" />
+            <img
+              src="assets/excel-app.png"
+              alt="Tampilan Aplikasi Analisis Penjualan Excel"
+            />
           </a>
           <p>Aplikasi Analisis Penjualan Sederhana Excel</p>
           <p class="tagline__des">
@@ -145,27 +148,37 @@
             input data penjualan, semua total, grafik, dan produk terlaris akan
             muncul otomatis dan rapi.
           </p>
-        </div>
+        </article>
       </div>
     </section>
     <section class="contact__container" id="contact">
-      <h4 class="tagline__title">Kontak</h4>
+      <h2 class="tagline__title">Kontak</h2>
       <div class="contact__box">
-        <a href="https://github.com/Andhikagr" target="_blank">
+        <a
+          href="https://github.com/Andhikagr"
+          target="_blank"
+          aria-label="Github"
+        >
           <i class="ri-github-fill"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/andhika-gilang-rahadian-5883951b8/"
           target="_blank"
+          aria-label="Linkedin"
         >
           <i class="ri-linkedin-box-fill"></i>
         </a>
-        <a href="https://www.instagram.com/andhikagilangr/" target="_blank">
+        <a
+          href="https://www.instagram.com/andhikagilangr/"
+          target="_blank"
+          aria-label="Instagram"
+        >
           <i class="ri-instagram-fill"></i>
         </a>
         <a
           href="https://www.facebook.com/AndhikaGilangRahadian/"
           target="_blank"
+          aria-label="Facebook"
         >
           <i class="ri-facebook-circle-fill"></i>
         </a>
@@ -177,10 +190,12 @@
         &copy; 2025 <span>Andhika Gilang Rahadian. </span> All rights reserved.
       </p>
     </footer>
-    <div class="modal" id="modal">
+
+    <dialog class="modal" id="modal">
       <span class="material-symbols-outlined" id="modal-close"> close </span>
-      <img src="" alt="preview" id="modal-img" />
-    </div>
+      <img src="" alt="preview-image" id="modal-img" />
+    </dialog>
+
     <script src="js/script.js"></script>
   </body>
 </html>
